@@ -201,7 +201,6 @@ def find_url(event: Event) -> str | None:
     google_re = re.compile(r"https://meet\.google.*")
     for l in desc:
         for w in l.split(" "):
-            print(w)
             if zoom_re.match(w) is not None or google_re.match(w) is not None:
                 return w
 
